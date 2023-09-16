@@ -1,0 +1,44 @@
+<%- include("./partials/head.ejs") %>
+
+<div class="head">
+  <h3>Login</h3>
+</div>
+
+<form action="/login" method="POST">
+  
+  <div class="container">
+    <label for="username"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username" required>
+
+    <label for="password"><b>Password</b></label>
+    <div class="">
+      <input type="password" name="password"  id="myInput" placeholder="Enter password">
+      <input type="checkbox" onclick="myFunction()"> Show Password
+    </div>
+    <script>
+    function myFunction() {
+      var x = document.getElementById("myInput");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+    </script>
+
+       
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw"><a href="#">Forgot password?</a></span>
+  </div>
+  <p style="text-align: center;">Don't have an account?<a href="/register">Sign Up</a></p>
+</form>
+  
+
+<%- include("./partials/footer.ejs") %>

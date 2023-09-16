@@ -1,0 +1,18 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background: url(../img/-1050366421.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: new time roman;
+}
+h1{
+    font-size: 30px;
+    color: white;
+    margin-top: 250px;
+}
+p{
+    font-size: 17px;
+}

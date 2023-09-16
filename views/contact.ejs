@@ -1,0 +1,101 @@
+<%- include("./partials/heading") %>
+
+<style>
+    .cont p {
+        font-size: 50px; 
+        font-weight: bold; 
+        text-align: center; 
+        font-family: Comic Sans MS;
+        color: rgb(130, 130, 206);
+    }
+
+    .icons {
+        text-align: center;
+    }
+
+    .icons ul li {
+        display: inline-block;
+        text-align: center; 
+        padding: 18px;
+    }
+
+    .icons .fa {  
+        transition: 0.5s;  
+        border-radius: 20px; 
+        width: 40px; 
+        height: 40px;    
+        color: white; 
+        line-height: 2.2; 
+        font-size: 20px;
+    }
+</style>
+
+<!-- contact -->
+<section class="contact pb-5" id="contact">
+    <div class="container pb-xl-5 pb-lg-3">
+        <h3 class="text-bl text-center font-weight-bold mb-2">Contact Us</h3>
+        <h6 class="text-colors text-center let-spa mb-5">Get In Touch</h6>
+        <div class="row mx-sm-0 mx-2">
+            <!-- map 
+            <div class="col-lg-6 map" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423286.27404345275!2d-118.69191921441556!3d34.02016130939095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos+Angeles%2C+CA%2C+USA!5e0!3m2!1sen!2sin!4v1522474296007"
+                allowfullscreen></iframe>
+            </div>
+            //map -->
+            <div class="col-md-6 cont">
+                <p>GET IN TOUCH WITH US ON ANY OF OUR SOCIAL MEDIA HANDLES</p>
+                   <!-- social icons -->
+                <div class="icons">
+                    <ul>
+                        <li class="social">
+                            <a href="#"><i class="fa fa-facebook-f" style="background: #3b5998; "></i></a>
+                        </li>
+                        <li class="social">
+                            <a href="#"><i class="fa fa-twitter" style="background: #1da1f2;"></i></a>
+                        </li>
+                        <li class="social">
+                            <a href="#"><i class="fa fa-google-plus" style="background: #F44336;"></i></a>
+                        </li>
+                        <li class="social">
+                            <a href="#"><i class="fa fa-dribbble" style="background: #ea4c89;"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- contact form -->
+                <div class="main_grid_contact" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                    <div class="form-w3ls p-md-5 p-4">
+                        <h4 class="mb-4 sec-title-w3 let-spa text-bl">Send us a message</h4>
+                        <form action="/contact" method="post">
+                            <div class="row">
+                                <div class="col-sm-6 form-group pr-sm-1">
+                                    <input class="form-control" type="text" name="Name" placeholder="Name" required="">
+                                </div>
+                                <div class="col-sm-6 form-group pl-sm-1">
+                                    <input class="form-control" type="email" name="Email" placeholder="Email" required="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="Subject" placeholder="Subject" required="">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="number" name="Phone" placeholder="Phone no" required="">
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" placeholder="Message" required=""></textarea>
+                            </div>
+                            <div class="input-group1 text-right">
+                                <button class="btn" type="submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- //contact form -->
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- //contact -->
+    
+<%- include("./partials/footer") %>

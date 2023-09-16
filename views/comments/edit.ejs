@@ -1,0 +1,14 @@
+<%- include("../partials/coursehead.ejs") %>
+
+<div class="container">
+    <h1 style="text-align: center">Edit comment </h1>
+    <form action="/blogs/<%- blog_id %>/comments?_method=PUT" method="POST">
+        <label for="name">Add new comment</label>
+        <input type="text" value="<%- comment.text %>" name="comment[text]">   
+        <a href="/blogs/<%- blog_id %>" class="btn btn-secondary">Cancel</a>
+        <button type="submit" class="btn btn-lg btn-primary btn-block">Submit</button>
+    </form>
+</div>
+
+<%- include("../partials/coursefoot.ejs") %>  
+

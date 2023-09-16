@@ -1,0 +1,28 @@
+<%- include("../partials/bloghead") %>
+
+	<div class="container">
+		<h1 class="mb-4">Kaydee Academy Blog</h1>
+		
+
+		<p>Welcome to our Kaydee Academy Blog Page...<br>
+		You'll get all the necessary update and information concerning our websites.</p>
+		<p>We are here to serve you better.</p>
+		<p>Our Team will always keep you updated with any change</p>
+		<p>Congratulations for choosing Kaydee Academy - The School for the Brainers..</p>
+		<a href="/blogs/new" class="btn btn-success">New Article</a>
+
+	<% blogs.forEach(function(blog){ %>
+		<div class="card mt-4">
+			<div class="card-body">
+				<h4 class="card-title"><%- blog.name %></h4>
+				<div class="card-subtitle text-muted mb-2">
+					<%- blog.createdAt.toDateString() %>
+				</div>
+				<div class="card-text mb-2"><%- blog.description %></div>
+				<a href="/blogs/<%- blog.slug %>" class="btn btn-primary"> Read More</a>
+			</div>
+		</div>
+	<% }) %>
+</div>
+
+<%- include("../partials/footer") %>

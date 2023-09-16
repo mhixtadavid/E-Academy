@@ -1,0 +1,84 @@
+<%- include("../partials/coursehead") %>
+
+<style>
+    body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], [type=file], [type=number], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 30%;
+}
+
+.container.one {
+  border-radius: 5px;
+  padding: 20px;
+}
+
+h3 {
+    text-align: center;
+    color: dodgerblue;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 40px;
+    margin: 20px;
+}
+
+</style>
+
+<h3>
+    Create A New Course
+</h3>
+
+<div class="container one">
+  <form action="/courses" enctype="multipart/form-data" method="POST">
+    <div class="container">
+    <label for="name">Course Title</label>
+    <input type="text" name="name" placeholder="Course Title...">
+
+    <label for="course">Course Type</label>
+    <select name="course">
+        <option value="Select Course">Select Course:</option>
+        <option value="Artificial-Intelligence">Artificial-Intelligence</option>
+        <option value="Arts">Arts</option>
+        <option value="Back-End-Courses">Back-End-Courses</option>
+        <option value="CSS-Courses">CSS-Courses</option>
+        <option value="E-Books">E-Books</option>
+        <option value="Enterpreneurship">Enterpreneurship</option>
+        <option value="External-Libraries">External-Libraries</option>
+        <option value="HTML-Courses">HTML-Courses</option>
+        <option value="JavaScript-Courses">JavaScript-Courses</option>
+        <option value="Science">Science</option>
+        <option value="Social-Science">Social-Science</option>
+    </select>
+
+    <label for="tutorial">Tutorial</label>
+    <input type="file" name="tutorial">
+
+    <label for="price">Price</label>
+    <input type="number" name="price" placeholder="Enter course fee..">
+
+    <label for="subject">Subject</label>
+    <textarea name="description" placeholder="Write something.." style="height:200px"></textarea>
+
+    <button type="submit" class="btn btn-lg btn-primary btn-block">Submit</button>
+    <a href="/courses">Go Back</a>
+  </div>
+  </form>
+</div>
+
+<%- include("../partials/coursefoot") %>

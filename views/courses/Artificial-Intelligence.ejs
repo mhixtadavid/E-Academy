@@ -1,0 +1,42 @@
+<%- include("../partials/coursehead") %>
+
+<style>
+	.card-img-bottom {
+		height: 250px;	
+	}
+	.card {
+		margin-bottom: 20px;
+	}
+</style>
+
+			<div class="row container">
+                <!-- blog grid -->
+                <% courses.forEach(function(course){ %>
+				<div class="col-lg-4 col-md-6">
+					<div class="card">
+						<div class="card-header p-0 position-relative">
+							<a href="/courses/<%- course._id %>">
+								<video class="card-img-bottom" src="${req.file.path}" alt="course" controls></video>
+								<span class="post-icon" aria-hidden="true">$<%- course.price %></span>
+							</a>
+						</div>
+						<div class="card-body">
+							<h6 class="text-colors let-spa mb-3"></h6>
+							<h5 class="blog-title card-title font-weight-bold text-bl"><%- course.name %></h5>							
+							<div class="row mt-5">
+								<div class="col-3 testi-img-res px-2">
+									<img src="/images/te1.jpg" alt=" " class="img-fluid rounded-circle" />
+								</div>
+								<div class="col-9 w3_testi_grid mt-xl-2 mt-lg-0 mt-md-2 mt-4">
+									<h5 class="text-colors mb-1"><%- course.author.username %></h5>
+									<p>Good day Programmers</p>
+								</div>
+							</div>
+						</div>
+                    </div>
+                </div>
+                <% }); %>                
+				<!-- //blog grid -->
+			</div>
+			
+<%- include("../partials/coursefoot") %>

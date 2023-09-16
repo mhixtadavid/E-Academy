@@ -1,0 +1,26 @@
+<%- include("../partials/coursehead") %>
+
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center">Edit <%- course.name %></h1>
+        <div style="width: 30%; margin:  25px auto;">
+            <form action="/courses/<%- course._id %>?_method=PUT" enctype="multipart/form-data" method="post">
+                <div class="form-group">
+                    <input class="form-control" type="text" value="<%- course.name %>" name="course[name]">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="file" value="<%- course.image %>" name="course[image]">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" value="<%- course.description %>" name="course[description]">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-lg btn-Primary btn-block">Submit</button>
+                </div>
+            </form>
+            <a href="/courses">Go Back</a>
+        </div>
+   </div>
+</div>
+
+<%- include("../partials/coursefoot") %>
